@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { HomeComponent } from './pages/home/home.component';
+import { MenuLeftComponent } from "./shared/menu-left/menu-left.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, MenuLeftComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
