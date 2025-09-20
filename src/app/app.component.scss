@@ -1,0 +1,21 @@
+/* ========================================
+   ESTILOS DEL COMPONENTE PRINCIPAL - HABITZ
+   ======================================== */
+
+:host {
+  display: block;
+  min-height: 100vh;
+  background-color: var(--background);
+}
+
+.main {
+  min-height: 100vh;
+  background-color: var(--background);
+  color: var(--text-primary);
+}
+
+.content {
+  background-color: var(--background);
+  min-height: 100vh;
+  padding: var(--space-4);
+}

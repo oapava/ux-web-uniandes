@@ -1,1 +1,180 @@
-/* You can add global styles to this file, and also import other style files */
+/* ========================================
+   ESTILOS GLOBALES DE LA APLICACIÓN HABITZ
+   ======================================== */
+
+/* Importar Bootstrap personalizado con variables de Habitz */
+@import './app/styles/bootstrap-custom.scss';
+
+/* Importar sistema completo de diseño personalizado */
+@import './app/styles/index.css';
+
+/* Asegurar que el fondo de Habitz se aplique correctamente */
+html, body {
+  background-color: #F7FAF9 !important;
+  color: #1F2937 !important;
+}
+
+/* Aplicar también al componente raíz de Angular */
+app-root {
+  display: block;
+  min-height: 100vh;
+  background-color: #F7FAF9 !important;
+}
+
+/* ===== CLASES PERSONALIZADAS PARA HABITZ CON BOOTSTRAP ===== */
+
+/* Botones personalizados que combinan Bootstrap con Habitz */
+.btn-habitz-primary {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #fff;
+  background-color: #2FA39A;
+  border: 1px solid #2FA39A;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  transition: all 0.15s ease-in-out;
+}
+
+.btn-habitz-primary:hover {
+  background-color: #0d9488;
+  border-color: #0d9488;
+  color: #fff;
+}
+
+.btn-habitz-secondary {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #fff;
+  background-color: #84A98C;
+  border: 1px solid #84A98C;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  transition: all 0.15s ease-in-out;
+}
+
+.btn-habitz-secondary:hover {
+  background-color: #6b8a73;
+  border-color: #6b8a73;
+  color: #fff;
+}
+
+.btn-habitz-accent {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #1F2937;
+  background-color: #F4B860;
+  border: 1px solid #F4B860;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  transition: all 0.15s ease-in-out;
+}
+
+.btn-habitz-accent:hover {
+  background-color: #f0b04c;
+  border-color: #f0b04c;
+  color: #1F2937;
+}
+
+/* Cards personalizadas para hábitos */
+.card-habitz {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #FFFFFF;
+  background-clip: border-box;
+  border: 1px solid #A7B6C2;
+  border-radius: 0.75rem;
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1);
+  transition: all 0.2s ease-in-out;
+}
+
+.card-habitz:hover {
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+  transform: translateY(-2px);
+}
+
+/* Alertas personalizadas */
+.alert-habitz-success {
+  position: relative;
+  padding: 0.75rem 1.25rem;
+  margin-bottom: 1rem;
+  border: 1px solid transparent;
+  border-radius: 0.375rem;
+  background-color: rgba(47, 163, 154, 0.1);
+  border-color: #2FA39A;
+  color: #0f766e;
+}
+
+.alert-habitz-info {
+  position: relative;
+  padding: 0.75rem 1.25rem;
+  margin-bottom: 1rem;
+  border: 1px solid transparent;
+  border-radius: 0.375rem;
+  background-color: rgba(244, 184, 96, 0.1);
+  border-color: #F4B860;
+  color: #92400e;
+}
+
+/* Badges para rachas */
+.badge-streak {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1;
+  color: white;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  background: linear-gradient(135deg, #F4B860 0%, #d97706 100%);
+  border-radius: 50px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+}
+
+/* Formularios personalizados */
+.form-control-habitz {
+  display: block;
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #1F2937;
+  background-color: #FFFFFF;
+  background-image: none;
+  border: 1px solid #A7B6C2;
+  border-radius: 0.5rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-control-habitz:focus {
+  color: #1F2937;
+  background-color: #FFFFFF;
+  border-color: #2FA39A;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(47, 163, 154, 0.25);
+}
+

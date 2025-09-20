@@ -1,0 +1,128 @@
+/* ========================================
+   BOOTSTRAP PERSONALIZADO - HABITZ
+   ======================================== */
+
+// Variables SCSS de Bootstrap personalizadas con los colores de Habitz
+$primary: #2FA39A;    // Teal calmo
+$secondary: #84A98C;  // Sage
+$success: #22c55e;    // Verde éxito
+$info: #3b82f6;       // Azul información
+$warning: #F4B860;    // Ámbar suave (nuestro accent)
+$danger: #ef4444;     // Rojo error
+$background: #D9D9D9; // Gris muy claro
+
+// Colores de fondo y superficie
+$body-bg: #F7FAF9;
+$body-color: #1F2937;
+
+// Grises personalizados
+$gray-100: #f1f5f4;
+$gray-200: #e2e8e6;
+$gray-300: #A7B6C2;
+$gray-400: #8fa8a3;
+$gray-500: #6b8984;
+$gray-600: #526b66;
+$gray-700: #405651;
+$gray-800: #2d423e;
+$gray-900: #1F2937;
+
+// Configuración de tema
+$theme-colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "success": $success,
+  "info": $info,
+  "warning": $warning,
+  "danger": $danger,
+  "light": #f8f9fa,
+  "dark": #212529,
+  "accent": #F4B860  // Color personalizado para Habitz
+);
+
+// Espaciado personalizado (convertir rem a px para Bootstrap)
+$spacer: 1rem;
+$spacers: (
+  0: 0,
+  1: $spacer * 0.25,    // 4px
+  2: $spacer * 0.5,     // 8px
+  3: $spacer * 0.75,    // 12px
+  4: $spacer * 1,       // 16px
+  5: $spacer * 1.25,    // 20px
+  6: $spacer * 1.5,     // 24px
+  7: $spacer * 2,       // 32px
+  8: $spacer * 2.5,     // 40px
+  9: $spacer * 3,       // 48px
+  10: $spacer * 4,      // 64px
+);
+
+// Tipografía
+$font-family-sans-serif: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+$font-size-base: 1rem;
+$line-height-base: 1.5;
+
+// Bordes y radios
+$border-radius: 0.25rem;
+$border-radius-sm: 0.125rem;
+$border-radius-lg: 0.5rem;
+$border-radius-xl: 0.75rem;
+$border-radius-pill: 50rem;
+
+// Sombras personalizadas
+$box-shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+$box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+$box-shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+
+// Configuraciones de componentes específicos
+$card-bg: #FFFFFF;
+$card-border-color: #A7B6C2;
+$card-border-radius: $border-radius-lg;
+
+$btn-border-radius: $border-radius;
+$btn-border-radius-sm: $border-radius-sm;
+$btn-border-radius-lg: $border-radius-lg;
+
+// Configuración de navegación
+$navbar-light-color: $body-color;
+$navbar-light-hover-color: $primary;
+$navbar-light-active-color: $primary;
+
+// Configuración de alertas
+$alert-border-radius: $border-radius;
+
+// Variables de formularios
+$input-bg: #FFFFFF;
+$input-border-color: #A7B6C2;
+$input-focus-border-color: $primary;
+$input-focus-box-shadow: 0 0 0 0.2rem rgba(47, 163, 154, 0.25);
+
+// Configuración responsive (mantener breakpoints de Bootstrap)
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1320px
+);
+
+// Desactivar algunos componentes de Bootstrap que no necesitamos
+$enable-caret: false;
+$enable-rounded: true;
+$enable-shadows: true;
+$enable-gradients: false;
+$enable-transitions: true;
+$enable-reduced-motion: true;
+$enable-smooth-scroll: true;
+$enable-grid-classes: true;
+$enable-utilities: true;
+
+// Importar Bootstrap después de definir las variables
+@import '../../../node_modules/bootstrap/scss/bootstrap';
