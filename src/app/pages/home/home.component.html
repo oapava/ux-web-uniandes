@@ -1,4 +1,79 @@
 <section class="container">
-    <h1>Welcome to Habitz Home Page</h1>
-    <p>This is the home component.</p>
+    <div class="row">
+        <app-main-button
+            class="col-12 col-md-6 col-lg-6"
+            [text]=" 'Crear Hábito' "
+        />
+        <app-main-button
+            class="col-12 col-md-6 col-lg-6"
+            [text]=" 'Ver Insignias' "
+            [typeIcon]="'plus'"
+        />
+    </div>
+
+    <div class="row">
+        <div class="col-12 col-md-6 col-lg-6">
+            <div class="gray-container">
+                <div class="header-container row">
+                    <h6 class="col-12 col-md-6 col-lg-6">RACHAS</h6>
+                    <app-icon-button class="col-auto ms-auto" [icon]="'images/next.png'" />
+                </div>
+                <div class="body-container">
+                    <ul class="p-0 m-0">
+                        <li class="d-flex align-items-center">
+                            <img src="images/leer.png" alt="ico" class="me-2" width="40"> Beber agua <app-icon-button class="col-auto ms-auto" [type]="'info'" [content]="'10%'" [icon]="'images/plus.png'" />
+                        </li>
+                        <li class="d-flex align-items-center">
+                            <img src="images/leer.png" alt="ico" class="me-2" width="40"> Beber agua <app-icon-button class="col-auto ms-auto" [type]="'info'" [content]="'10%'" [icon]="'images/plus.png'" />
+                        </li>
+                        <li class="d-flex align-items-center">
+                            <img src="images/leer.png" alt="ico" class="me-2" width="40"> Beber agua <app-icon-button class="col-auto ms-auto" [type]="'info'" [content]="'10%'" [icon]="'images/plus.png'" />
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-6">
+            <div class="gray-container">
+                <div class="header-container row">
+                    <h6 class="col-9 col-md-9 col-lg-9">TUS HÁBITOS</h6>
+                    <app-icon-button class="col-auto ms-auto" [icon]="'images/next.png'" />
+                    <div class="body-container">
+                        <ul class="p-0 m-0">
+                            <li class="d-flex align-items-center">
+                                <img src="images/leer.png" alt="ico" class="me-2" width="40"> 
+                                Beber agua 
+                                <div class="ms-auto d-flex">
+                                    <app-icon-button class="me-2" [type]="'edit'" [icon]="'images/edit.png'" />
+                                    <app-icon-button [type]="'detail'" [icon]="'images/detail.png'" />
+                                </div>
+                            </li>
+                            <li class="d-flex align-items-center">
+                                <img src="images/leer.png" alt="ico" class="me-2" width="40"> 
+                                Beber agua 
+                                <div class="ms-auto d-flex">
+                                    <app-icon-button class="me-2" [type]="'edit'" [icon]="'images/edit.png'" />
+                                    <app-icon-button [type]="'detail'" [icon]="'images/detail.png'" />
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-6">
+            <div class="gray-container">
+                <iframe width="100%" height="250" src="https://www.youtube.com/embed/HBPZfoB74PI?si=DTDp-y7ljXrjfsfn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-6">
+            <div class="gray-container">
+                <iframe width="100%" height="250" src="https://www.youtube.com/embed/HBPZfoB74PI?si=DTDp-y7ljXrjfsfn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+    
+    
 </section>

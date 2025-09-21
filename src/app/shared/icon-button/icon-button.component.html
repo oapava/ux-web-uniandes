@@ -1,0 +1,9 @@
+<div [ngClass]="{
+    'button-icon': type === 'button', 
+    'button-icon-info': type === 'info',
+    'button-icon-detail': type === 'detail',
+    'button-icon-edit': type === 'edit'
+}">
+    <img *ngIf="!hasContent" [src]="icon" alt="Icono">
+    <p *ngIf="hasContent">{{ content }}</p>
+</div>
