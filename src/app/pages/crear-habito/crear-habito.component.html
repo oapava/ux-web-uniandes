@@ -1,0 +1,212 @@
+<div class="page-container">
+  <div class="cards-layout">
+
+    <div class="card card-primary">
+
+      <div class="card-header d-flex align-items-center justify-content-center position-relative">
+      <a class="btn btn-light btn-icon rounded-circle shadow-sm back-btn position-absolute start-0" routerLink="/">
+        <
+      </a>
+      <h2 class="mb-0 page-title">Crear Hábito</h2>
+    </div>
+
+    <div class="card-body">
+
+      <form>
+        <div class="row mb-3">
+          <div class="col-2 d-flex align-items-center justify-content-center">
+            <img src="/images/leer.png" alt="Crear hábito" class="icon-habit">
+          </div>
+          <div class="col-10">
+            <div class="mb-2">
+              <input type="text" class="form-control form-control-sm" formControlName="nombre" placeholder="Nombre hábito">
+              <small class="text-danger" *ngIf="form.get('nombre')?.touched && form.get('nombre')?.invalid">
+                El nombre es requerido.
+              </small>
+            </div>
+            <div>
+              <textarea rows="3" class="form-control" formControlName="descripcion" placeholder="Descripción hábito"></textarea>
+            </div>
+          </div>
+        </div>
+
+        <!-- Segunda fila: Fechas y Periodicidad -->
+        <div class="row mb-3">
+          <!-- Sección izquierda: Fechas -->
+          <div class="col-6">
+            <div class="mb-3">
+              <div class="d-flex align-items-center gap-3">
+                <label for="fechaInicio" class="form-label mb-0" style="min-width: 100px;">Fecha inicio</label>
+                <input type="date" id="fechaInicio" class="form-control" formControlName="fechaInicio">
+              </div>
+            </div>
+            <div class="mb-3">
+              <div class="d-flex align-items-center gap-3">
+                <label for="fechaFin" class="form-label mb-0" style="min-width: 100px;">Fecha fin</label>
+                <input type="date" id="fechaFin" class="form-control" formControlName="fechaFin">
+              </div>
+            </div>
+          </div>
+
+          <!-- Sección derecha: Periodicidad -->
+          <div class="col-6">
+            <div class="d-flex align-items-start gap-3">
+              <label for="cantidad" class="form-label mb-0" style="min-width: 100px; margin-top: 8px;">Periodicidad</label>
+              <div class="flex-grow-1">
+                <div class="mb-2">
+                  <select id="cantidad" class="form-control" formControlName="cantidad">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                  </select>
+                </div>
+                <div>
+                  <select id="unidadTiempo" class="form-control" formControlName="unidadTiempo">
+                    <option value="horas">Horas</option>
+                    <option value="dias">Días</option>
+                    <option value="semanas">Semana</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tercera fila: Días de la semana -->
+        <div class="row mb-3">
+          <div class="col-12">
+            <h5 class="mb-3">Días de la semana</h5>
+            <div class="days-container d-flex justify-content-between">
+
+              <div class="day-item">
+                <div class="form-check d-flex flex-column align-items-center">
+                  <input class="form-check-input day-checkbox" type="checkbox" id="lunes" formControlName="lunes">
+                  <label class="form-check-label day-label" for="lunes">LUN</label>
+                </div>
+              </div>
+
+              <div class="day-item">
+                <div class="form-check d-flex flex-column align-items-center">
+                  <input class="form-check-input day-checkbox" type="checkbox" id="martes" formControlName="martes">
+                  <label class="form-check-label day-label" for="martes">MAR</label>
+                </div>
+              </div>
+
+              <div class="day-item">
+                <div class="form-check d-flex flex-column align-items-center">
+                  <input class="form-check-input day-checkbox" type="checkbox" id="miercoles" formControlName="miercoles">
+                  <label class="form-check-label day-label" for="miercoles">MIÉ</label>
+                </div>
+              </div>
+
+              <div class="day-item">
+                <div class="form-check d-flex flex-column align-items-center">
+                  <input class="form-check-input day-checkbox" type="checkbox" id="jueves" formControlName="jueves">
+                  <label class="form-check-label day-label" for="jueves">JUE</label>
+                </div>
+              </div>
+
+              <div class="day-item">
+                <div class="form-check d-flex flex-column align-items-center">
+                  <input class="form-check-input day-checkbox" type="checkbox" id="viernes" formControlName="viernes">
+                  <label class="form-check-label day-label" for="viernes">VIE</label>
+                </div>
+              </div>
+
+              <div class="day-item">
+                <div class="form-check d-flex flex-column align-items-center">
+                  <input class="form-check-input day-checkbox" type="checkbox" id="sabado" formControlName="sabado">
+                  <label class="form-check-label day-label" for="sabado">SÁB</label>
+                </div>
+              </div>
+
+              <div class="day-item">
+                <div class="form-check d-flex flex-column align-items-center">
+                  <input class="form-check-input day-checkbox" type="checkbox" id="domingo" formControlName="domingo">
+                  <label class="form-check-label day-label" for="domingo">DOM</label>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- Cuarta fila: Duración de la actividad -->
+        <div class="row mb-3">
+          <div class="col-12">
+            <div class="d-flex align-items-center gap-4">
+              <div class="duration-label">
+                <div class="mb-1">Duración de la actividad</div>
+                <div class="mb-1">(Hábito)</div>
+              </div>
+              <div class="d-flex gap-3">
+                <select id="duracionCantidad" class="form-control duration-select" formControlName="duracionCantidad">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                </select>
+                <select id="duracionUnidad" class="form-control duration-select" formControlName="duracionUnidad">
+                  <option value="horas">Horas</option>
+                  <option value="dias">Días</option>
+                  <option value="semanas">Semana</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quinta fila: Mensaje motivación en la alarma -->
+        <div class="row mb-3">
+          <div class="col-12">
+            <div class="d-flex align-items-center gap-4">
+              <span class="motivation-text">Mensaje motivación en la alarma</span>
+              <div class="form-check form-switch m-0">
+                <input class="form-check-input motivation-switch" type="checkbox" role="switch" id="motivacion-switch" formControlName="mensajeMotivacion">
+                <label class="visually-hidden" for="motivacion-switch">Activar mensaje motivación</label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Botones de acción -->
+        <div class="d-flex justify-content-center gap-5 mt-5 form-action-buttons">
+          <button type="button" class="btn btn-primary">Cancelar</button>
+          <button type="submit" class="btn btn-primary">Guardar</button>
+        </div>
+
+      </form>
+
+
+    </div>
+    </div>
+
+    <div class="card card-secondary">
+      <div class="card-header">
+        <h3>Información y tips con IA</h3>
+      </div>
+      <div class="card-body">
+        <p>Para fomentar hábitos saludables, enfócate en una alimentación equilibrada, actividad física regular y sueño adecuado.
+           Incorpora rutinas de higiene, como lavar las manos y cuidar tus dientes.
+          Cultiva la salud mental con mindfulness o pasatiempos, y mantén una actitud positiva.</p>
+      </div>
+      <div class="card-footer d-flex justify-content-center">
+        <button type="button" class="btn btn-primary tip-button">Otro Tip</button>
+      </div>
+    </div>
+
+  </div>
+</div>

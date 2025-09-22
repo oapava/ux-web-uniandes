@@ -9,5 +9,11 @@ export const routes: Routes = [
       import('./pages/config-permisos/config-permisos.component')
         .then(m => m.ConfigPermisosComponent)
   },
+  {
+    path: 'habitos/crear',
+    loadComponent: () =>
+      import('./pages/crear-habito/crear-habito.component')
+        .then(m => m.CrearHabitoComponent)
+  },
   { path: '**', redirectTo: '' }
 ];

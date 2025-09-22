@@ -16,7 +16,7 @@
 }
 
 .page-title {
-  font-weight: 700;
+  font-weight: normal;
   letter-spacing: 0.02em;
   text-transform: uppercase;
 }
@@ -69,7 +69,7 @@
 
 .permission-label {
   font-size: 1rem;
-  font-weight: 500;
+  font-weight: normal;
 }
 
 .form-check-input {
@@ -90,7 +90,7 @@
   /* Estilos para los botones de acción (solo los botones de abajo) */
   .btn {
     padding: 0.75rem 2rem;
-    font-weight: 600;
+    font-weight: normal;
     border-radius: 0.75rem;
     font-size: 1rem;
     transition: all 0.2s ease;
