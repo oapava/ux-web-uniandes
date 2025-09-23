@@ -1,18 +1,56 @@
 <div class="config-container">
-  <h2>Configuración</h2>
-  
-  <!-- Contenido principal de configuración -->
-  <div class="config-content">
-    <p>Página principal de configuración</p>
+    <!-- Router outlet para las rutas hijas -->
+    <router-outlet #routerOutlet="outlet"></router-outlet>
     
-    <!-- Navegación interna (opcional) -->
-    <nav class="config-nav">
-      <a routerLink="/configuracion/reglas-de-agenda">Reglas de Agenda</a>
-    </nav>
-  </div>
-  
-  <!-- Router outlet para las rutas hijas -->
-  <div class="config-child-content">
-    <router-outlet></router-outlet>
-  </div>
+    <ng-container *ngIf="!routerOutlet.isActivated">
+        <div class="container m-50 ">
+            <div class="gray-container">
+                <!-- Cabecera -->
+                <div class="d-flex align-items-center w-100 mb-10">
+                    <app-icon-button class="me-3" [type]="'back'" [icon]="'images/back-arrow.png'" />
+                    <div class="flex-grow-1 d-flex justify-content-center">
+                        <h5 class="mb-0">CONFIGURACIÓN</h5>
+                    </div>
+                </div>
+                <!-- Body -->
+                <div class="row">
+                    <div class="col-12 col-md-6 col-lg-6 border-bottom">
+                        <div class="button-config d-flex p-3">
+                            <p class="mb-0 mt-1">Vincular Calendario</p>
+                            <app-icon-button class="ms-auto" [type]="'next-small'" [icon]="'images/next.png'" />
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-6 border-bottom">
+                        <div class="button-config d-flex p-3">
+                            <p class="mb-0 mt-1">Reglas de Agenda</p>
+                            <app-icon-button class="ms-auto" [type]="'next-small'" [link]="'/configuracion/reglas-de-agenda'" [icon]="'images/next.png'" />
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-6 border-bottom">
+                        <div class="button-config d-flex p-3">
+                            <p class="mb-0 mt-1">Permisos</p>
+                            <app-icon-button class="ms-auto" [type]="'next-small'" [icon]="'images/next.png'" />
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-6 border-bottom">
+                        <div class="button-config d-flex p-3">
+                            <p class="mb-0 mt-1">Conﬁgurar teléfono</p>
+                            <app-icon-button class="ms-auto" [type]="'next-small'" [icon]="'images/next.png'" />
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- Navegación interna (opcional) -->
+            <!-- <nav class="config-nav">
+                <a routerLink="/configuracion/reglas-de-agenda">Reglas de Agenda</a>
+            </nav> -->
+        </div>
+    </ng-container>
+    <div class="config-child-content" *ngIf="routerOutlet.isActivated">
+        <!-- Child routes will be rendered here -->
+    </div>
 </div>

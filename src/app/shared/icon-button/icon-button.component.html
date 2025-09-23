@@ -2,8 +2,17 @@
     'button-icon': type === 'button', 
     'button-icon-info': type === 'info',
     'button-icon-detail': type === 'detail',
-    'button-icon-edit': type === 'edit'
+    'button-icon-edit': type === 'edit',
+    'button-icon-back': type === 'back',
+    'button-icon-next-small': type === 'next-small'
 }">
-    <img *ngIf="!hasContent" [src]="icon" alt="Icono">
+    <ng-container *ngIf="hasLink; else noLink">
+        <a [routerLink]="link">
+            <img *ngIf="!hasContent" [src]="icon" alt="Icono">
+        </a>
+    </ng-container>
+    <ng-template #noLink>
+        <img *ngIf="!hasContent" [src]="icon" alt="Icono">
+    </ng-template>
     <p *ngIf="hasContent">{{ content }}</p>
 </div>
