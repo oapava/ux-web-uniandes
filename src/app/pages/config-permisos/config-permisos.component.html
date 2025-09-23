@@ -1,15 +1,14 @@
 <!-- Contenedor principal de la página -->
 <section class="config-permisos page-container">
 
-
   <!-- Tarjeta de permisos -->
   <div class="card permissions-card mt-4">
 
-    <div class="page-header d-flex align-items-center justify-content-center position-relative">
-      <a class="btn btn-light btn-icon rounded-circle shadow-sm back-btn position-absolute start-0" routerLink="/">
-        <
-      </a>
-      <h2 class="mb-0 page-title">Permisos</h2>
+    <div class="d-flex align-items-center w-100 mb-10">
+      <app-icon-button class="me-3" [type]="'back'" [icon]="'images/back-arrow.png'" [link]="'/configuracion'" />
+      <div class="flex-grow-1 d-flex justify-content-center">
+        <h5 class="mb-0">PERMISOS</h5>
+      </div>
     </div>
 
     <div class="card-body">

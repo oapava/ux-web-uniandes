@@ -1,0 +1,38 @@
+<div class="modal-backdrop" *ngIf="isOpen">
+  <div class="modal-content">
+    <button class="btn-close" (click)="close()">✕</button>
+
+    <!-- Paso 1 -->
+    <ng-container *ngIf="step === 'phone'">
+      <h3>Configurar teléfono</h3>
+      <form [formGroup]="phoneForm" (ngSubmit)="sendCode()">
+        <input type="text" formControlName="phone" placeholder="Número de celular">
+        <button type="submit" class="btn-primary">Enviar código SMS</button>
+      </form>
+    </ng-container>
+
+    <!-- Paso 2 -->
+    <ng-container *ngIf="step === 'code'">
+      <h3>Código SMS</h3>
+      <p>Ingresa el código que llegó a el número de celular que ingresaste.</p>
+      <form [formGroup]="codeForm" (ngSubmit)="verifyCode()">
+        <div class="code-grid">
+          <input maxlength="1" formControlName="d1">
+          <input maxlength="1" formControlName="d2">
+          <input maxlength="1" formControlName="d3">
+          <input maxlength="1" formControlName="d4">
+        </div>
+        <div class="text-center mt-3">
+          <button type="submit" class="btn-primary">Verificar</button>
+        </div>
+      </form>
+    </ng-container>
+
+    <!-- Paso 3 -->
+    <ng-container *ngIf="step === 'success'">
+      <h3>Verificación exitosa</h3>
+      <p>Tu número de teléfono ha sido verificado exitosamente.</p>
+      <button (click)="accept()" class="btn-primary">Aceptar</button>
+    </ng-container>
+  </div>
+</div>

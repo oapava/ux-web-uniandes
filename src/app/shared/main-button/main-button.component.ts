@@ -1,10 +1,11 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { RouterLink } from '@angular/router';
 import { IconButtonComponent } from '../icon-button/icon-button.component';
 
 @Component({
   selector: 'app-main-button',
   standalone: true,
-  imports: [IconButtonComponent],
+  imports: [IconButtonComponent, RouterLink],
   templateUrl: './main-button.component.html',
   styleUrl: './main-button.component.scss'
 })
