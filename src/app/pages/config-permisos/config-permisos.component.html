@@ -1,0 +1,65 @@
+<!-- Contenedor principal de la página -->
+<section class="config-permisos page-container">
+
+
+  <!-- Tarjeta de permisos -->
+  <div class="card permissions-card mt-4">
+
+    <div class="page-header d-flex align-items-center justify-content-center position-relative">
+      <a class="btn btn-light btn-icon rounded-circle shadow-sm back-btn position-absolute start-0" routerLink="/">
+        <
+      </a>
+      <h2 class="mb-0 page-title">Permisos</h2>
+    </div>
+
+    <div class="card-body">
+
+      <div class="row g-4">
+        <div class="col-12 col-md-6">
+          <div class="permission-pill">
+            <span class="permission-label">Leer calendario</span>
+            <div class="form-check form-switch m-0">
+              <input class="form-check-input" type="checkbox" role="switch" id="perm-read-cal" checked>
+              <label class="visually-hidden" for="perm-read-cal">Activar</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6">
+          <div class="permission-pill">
+            <span class="permission-label">Crear / Editar eventos</span>
+            <div class="form-check form-switch m-0">
+              <input class="form-check-input" type="checkbox" role="switch" id="perm-edit-events" checked>
+              <label class="visually-hidden" for="perm-edit-events">Activar</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6">
+          <div class="permission-pill">
+            <span class="permission-label">Whatsapp</span>
+            <div class="form-check form-switch m-0">
+              <input class="form-check-input" type="checkbox" role="switch" id="perm-whatsapp" checked>
+              <label class="visually-hidden" for="perm-whatsapp">Activar</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6">
+          <div class="permission-pill">
+            <span class="permission-label">Llamadas</span>
+            <div class="form-check form-switch m-0">
+              <input class="form-check-input" type="checkbox" role="switch" id="perm-calls" checked>
+              <label class="visually-hidden" for="perm-calls">Activar</label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+      <div class="d-flex justify-content-center mt-5 action-buttons">
+        <button type="button" class="btn btn-primary">Cancelar</button>
+        <button type="button" class="btn btn-primary">Guardar</button>
+      </div>
+</section>

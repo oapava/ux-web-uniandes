@@ -12,5 +12,17 @@ export const routes: Routes = [
             { path: 'reglas-de-agenda', component: AgendaRulesComponent }
         ]
     },
+    {
+    path: 'configuracion/permisos',
+    loadComponent: () =>
+      import('./pages/config-permisos/config-permisos.component')
+        .then(m => m.ConfigPermisosComponent)
+    },
+    {
+        path: 'habitos/crear',
+        loadComponent: () =>
+        import('./pages/crear-habito/crear-habito.component')
+            .then(m => m.CrearHabitoComponent)
+    },
     { path: '**', redirectTo: '' }
 ];
